@@ -34,11 +34,19 @@ class ProductsController < ApplicationController
 			render :edit
 		end
 	end
-	
+
 	def destroy 
 		@product = Product.find(params[:id])
 		@product.destroy
 		redirect_to products_path
+	end
+
+	def show 
+		@product = Product.find(params[:id])
+
+		if current_user
+			@review = @product.review.build
+		end
 	end
 
 	private
