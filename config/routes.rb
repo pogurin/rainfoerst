@@ -1,4 +1,4 @@
-Rails.application.routes.draw do
+Rainforest::Application.routes.draw do
   
   resources :products
   resources :users,only: [:new,:create]
