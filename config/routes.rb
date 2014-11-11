@@ -5,7 +5,7 @@ Rainforest::Application.routes.draw do
   resources :products do
     resources :reviews, only: [:show, :create, :destroy]
   end
-  
+# review is nest   
 
 
   # The priority is based upon order of creation: first created -> highest priority.
