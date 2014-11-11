@@ -3,7 +3,7 @@ class ReviewsController < ApplicationController
 	before_filter :ensure_logged_in, only: [:create, :destroy]
 
 	def show
-		@review = Review.find(params[:id]) 
+		@review = Review.find(params[:id])
 	end
 
 	def create

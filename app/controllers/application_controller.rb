@@ -10,6 +10,7 @@ class ApplicationController < ActionController::Base
   end
 
   helper_method :current_user
+  # it will make the method abilable to viewsw.
 
   def ensure_logged_in 
   	unless current_user
