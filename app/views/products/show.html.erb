@@ -21,7 +21,7 @@
 <h2><%= pluralize(@review.errors.count, "error") %> prohibited this review from being saved:</h2>
 
 <ul> 
-<% @review.errors.full_,messages.each do |msg| %>
+<% @review.errors.full_messages.each do |msg| %>
 <li><%= msg %></li>
 <% end %>
 </ul>

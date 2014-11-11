@@ -7,13 +7,13 @@ class SessionsController < ApplicationController
     if user && user.authenticate(params[:password])
       session[:user_id] = user.id
       redirect_to products_url, notice: "Logged in!"
-  else
-  	render "new"
+    else
+      render "new"
+    end
   end
-end
 
   def destroy
-  	session[:user_id] = nil
-  	redirect_to products_url, notice: "Logged out!"
+    session[:user_id] = nil
+    redirect_to products_url, notice: "Logged out!"
   end
 end

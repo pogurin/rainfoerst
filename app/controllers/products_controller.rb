@@ -3,10 +3,6 @@ class ProductsController < ApplicationController
 		@products = Product.all
 	end
 
-	def show
-		@product = Product.find(params[:id])
-	end
-
 	def new
 		@product = Product.new
 	end
@@ -19,7 +15,7 @@ class ProductsController < ApplicationController
 		@product = Product.new(product_params)
 
 		if @product.save
-			redirect_to_ products_url
+			redirect_to products_url
 		else
 			render :new
 		end
@@ -45,7 +41,7 @@ class ProductsController < ApplicationController
 		@product = Product.find(params[:id])
 
 		if current_user
-			@review = @product.review.build
+			@review = @product.reviews.build
 		end
 	end
 
