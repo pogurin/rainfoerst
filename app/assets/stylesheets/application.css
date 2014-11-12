@@ -22,3 +22,10 @@ body {
 	background-color: black;
 	color: white;
 }
+
+.userinfo{
+color: white;
+text-align: left;
+text-align: top;
+position:absolute; top:15px; left:20px
+}

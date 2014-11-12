@@ -3,7 +3,6 @@
 
 
 	<% @products.each do |product| %>
-
 		<h2><li><%= product.name %></li></h2>
 		<h4><%= link_to "show details", product_path(product.id) %></h4>	
 	<% end %>
@@ -14,3 +13,5 @@
 <% if current_user %>
 <%= link_to "Create Products", new_product_path %>	
 <% end %>
+
+
