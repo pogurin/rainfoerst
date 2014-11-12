@@ -9,4 +9,8 @@
 	<% end %>
 </ul>
 
-<%= link_to "Let`s make new Products!", new_product_path %>	
+<p>Let`s see the details.</p>
+
+<% if current_user %>
+<%= link_to "Create Products", new_product_path %>	
+<% end %>
