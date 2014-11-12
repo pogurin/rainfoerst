@@ -14,36 +14,70 @@
  *= require_self
  */
 
-body {  
-    text-align: center; 
-    background-color: white;
-}  
-#title
-{
+ body {  
+ 	text-align: center; 
+ 	background-color: white;
+ }  
+ #title
+ {
+ 	background-color: black;
+ 	color: white;
+ 	margin: 0px;
+ 	font-size: 70px;
+ }
+
+/*.create_products
+h4{	
+	text-decoration:none;
 	background-color: black;
 	color: white;
-}
+	font-size: 400px;
+	}*/
 
-.userinfo{
-color: white;
-text-align: left;
-text-align: top;
-position:absolute; top:15px; left:20px;
-}
+	.photo_name
+	h4{
+		font-size: 40px;
+		color: red;
+		margin: 5px;
+		
+		
+	}
 
-nav{
+	.userinfo{
+		/*color: red;
+		text-align: left;
+		text-align: top;
+		position:absolute; top:15px; left:20px;
+		background-color: white;
+		*/
+		background-color: white;
+		text-decoration: none;
+		color: red;
+		cursor: pointer;
+		font-weight: bold;
+		float: left;
+		padding: 8px 16px;
+		position:absolute; top:15px; left:20px;
+		border-radius: 30px;
+		border-radius: 30px;
+		border-radius: 30px;
+	}
 
-    position: absolute;
-    top: 120px; left:20px; height: 340px; width: 80px;
-}
+	section{
+
+		position: absolute;
+		top: 220px; left:20px; height: 340px; width: 80px;
+	}
 
 
-img {
-  width: 200px;
-  border-radius: 200px;
-  border-radius: 200px;
-  border-radius: 200px;
-}
+	img {
+		width: 200px;
+		border-radius: 200px;
+		border-radius: 200px;
+		border-radius: 200px;
+		display: inline-block;
+
+	}
 
 
 

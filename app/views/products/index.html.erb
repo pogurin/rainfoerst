@@ -1,19 +1,22 @@
 <h1 id="title">ALL PRODUCTS</h1>
 
 
-	<nav>
-	
+	<section>
 	<% @products.each do |product| %>
-	<h4><%= link_to product.name , product_path(product.id) %></h4>
+
+	<div class="photo_name">
+	<h4 id="create_products"><%= link_to product.name , product_path(product.id) %></h4>
+	
 	<image_tag<%= link_to image_tag(product.url), "/products/#{product.id}" %>
 	<% end %>
 
-	</nav>
+	</div>
+	</section>
 
 <p>Let`s see the details.</p>
 
 <% if current_user %>
-<%= link_to "Create Products", new_product_path %>	
+<%= link_to "Create Products", new_product_path %>
 <% end %>
 
 
