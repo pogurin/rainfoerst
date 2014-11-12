@@ -39,8 +39,22 @@ h4{
 		font-size: 40px;
 		color: red;
 		margin: 5px;
-		
-		
+		font-weight: bold;
+	}
+
+	.review
+	h3{
+		border-radius: 30px;
+		border-radius: 30px;
+		border-radius: 30px;
+		background-color: black;
+
+	}
+
+	.current_user
+	a{
+
+		background-color: red
 	}
 
 	.userinfo{
@@ -61,12 +75,14 @@ h4{
 		border-radius: 30px;
 		border-radius: 30px;
 		border-radius: 30px;
+		background-color: white;
 	}
 
 	section{
 
 		position: absolute;
 		top: 220px; left:20px; height: 340px; width: 80px;
+
 	}
 
 
@@ -77,6 +93,18 @@ h4{
 		border-radius: 200px;
 		display: inline-block;
 
+	}
+
+	.field
+	{
+		border: 1px solid #c6c7cc;
+		border-radius: 5px;
+		font: 14px/1.4 "Helvetica Neue", Helvetica, Arial, sans-serif;
+		overflow: hidden;
+		width: 240px;
+		
+
+		
 	}
 
 
