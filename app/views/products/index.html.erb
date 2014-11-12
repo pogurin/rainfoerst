@@ -5,6 +5,7 @@
 	<% @products.each do |product| %>
 
 		<div class="photo_name">
+
 			<h4 class="create_products">
 				<%= link_to product.name, product_path(product.id) %> 
 			</h4>
@@ -16,11 +17,6 @@
 
 	</section>
 
-<p>Let`s see the details.</p>
-
-<% if current_user %>
-<a id="current_user"><%= link_to "Create Products", new_product_path %></a>
-<% end %>
 
 
 

@@ -17,6 +17,7 @@
  body {  
  	text-align: center; 
  	background-color: white;
+ 	margin: 0px
  }  
  #title
  {
@@ -26,11 +27,6 @@
  	font-size: 70px;
  }
 
- #photo_name
- {
-
-
- }
 
 
  img {
@@ -39,6 +35,7 @@
  	border-radius: 200px;
  	border-radius: 200px;
  	display: inline-block;
+ 	margin: 10px;
  }
 
 
@@ -50,6 +47,12 @@
  	float: left;
  	display: inline;
  }
+
+.photo_name 
+{
+	background-color: red;
+	padding:1px;
+}
 
  .photo_name a {
  	text-decoration: none;
@@ -95,6 +98,24 @@
 		border-radius: 30px;
 		background-color: white;
 }
+
+.create_product
+{
+		background-color: white;
+		text-decoration: none;
+		color: red;
+		cursor: pointer;
+		font-weight: bold;
+		float: left;
+		padding: 8px 16px;
+		position:absolute; top:61px; left:20px;
+		border-radius: 30px;
+		border-radius: 30px;
+		border-radius: 30px;
+		background-color: white;
+}
+
+
 
 section{
 /*
