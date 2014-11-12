@@ -1,5 +1,5 @@
 class Product < ActiveRecord::Base #Product.all
-	validates :description, :name, presence: true
+	validates :description, :name, :url,presence: true
 	validates :price_in_cents, numericality: {only_integer: true} 
 
 	def formatted_price

@@ -15,7 +15,8 @@
  */
 
 body {  
-    text-align: center;  
+    text-align: center; 
+    background-color: white;
 }  
 #title
 {
@@ -27,5 +28,26 @@ body {
 color: white;
 text-align: left;
 text-align: top;
-position:absolute; top:15px; left:20px
+position:absolute; top:15px; left:20px;
 }
+
+nav{
+
+    position: absolute;
+    top: 120px; left:20px; height: 340px; width: 80px;
+}
+
+
+img
+{
+width: 50%;
+height: 400px;
+}
+
+
+
+
+
+
+
+

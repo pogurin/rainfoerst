@@ -1,12 +1,14 @@
 <h1 id="title">ALL PRODUCTS</h1>
 
 
-
+	<nav>
+	<h1>ALL Products</h1>
 	<% @products.each do |product| %>
-		<h2><li><%= product.name %></li></h2>
-		<h4><%= link_to "show details", product_path(product.id) %></h4>	
+	<h4><%= link_to product.name , product_path(product.id) %></h4>
+	<image_tag<%= link_to image_tag(product.url), "/products/#{product.id}" %>
 	<% end %>
 
+	</nav>
 
 <p>Let`s see the details.</p>
 
