@@ -1,13 +1,13 @@
-<h1>ALL PRODUCTS</h1>
+<h1 id="title">ALL PRODUCTS</h1>
 
 
-<ul>
+
 	<% @products.each do |product| %>
 
-		<li><%= product.name %></li>
-		<%= link_to "show details", product_path(product.id) %>	
+		<h2><li><%= product.name %></li></h2>
+		<h4><%= link_to "show details", product_path(product.id) %></h4>	
 	<% end %>
-</ul>
+
 
 <p>Let`s see the details.</p>
 
