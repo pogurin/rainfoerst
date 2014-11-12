@@ -26,38 +26,56 @@
  	font-size: 70px;
  }
 
-/*.create_products
-h4{	
-	text-decoration:none;
-	background-color: black;
-	color: white;
-	font-size: 400px;
-	}*/
+ #photo_name
+ {
 
-	.photo_name
-	h4{
-		font-size: 40px;
-		color: red;
-		margin: 5px;
-		font-weight: bold;
-	}
 
-	.review
-	h3{
-		border-radius: 30px;
-		border-radius: 30px;
-		border-radius: 30px;
-		background-color: black;
+ }
 
-	}
 
-	.current_user
-	a{
+ img {
+ 	width: 200px;
+ 	border-radius: 200px;
+ 	border-radius: 200px;
+ 	border-radius: 200px;
+ 	display: inline-block;
+ }
 
-		background-color: red
-	}
 
-	.userinfo{
+ .photo_name {
+ 	font-size: 40px;
+ 	color: red;
+ 	margin: 5px;
+ 	font-weight: bold;
+ 	float: left;
+ 	display: inline;
+ }
+
+ .photo_name a {
+ 	text-decoration: none;
+ 	color: black;
+ }
+ .photo_name a:hover {
+ 	text-decoration: none;
+ 	color: blue;
+ }
+
+ .review
+ h3{
+ 	border-radius: 30px;
+ 	border-radius: 30px;
+ 	border-radius: 30px;
+ 	background-color: black;
+
+ }
+
+ .current_user
+ a{
+
+ 	background-color: red
+ }
+
+ .userinfo{
 		/*color: red;
 		text-align: left;
 		text-align: top;
@@ -76,36 +94,31 @@ h4{
 		border-radius: 30px;
 		border-radius: 30px;
 		background-color: white;
-	}
+}
 
-	section{
+section{
+/*
+	position: absolute;
+	top: 220px; 
+	left:20px; 
+	height: 340px; 
+	width: 80px;
+*/
+}
 
-		position: absolute;
-		top: 220px; left:20px; height: 340px; width: 80px;
-
-	}
 
 
-	img {
-		width: 200px;
-		border-radius: 200px;
-		border-radius: 200px;
-		border-radius: 200px;
-		display: inline-block;
+.field
+{
+	border: 1px solid #c6c7cc;
+	border-radius: 5px;
+	font: 14px/1.4 "Helvetica Neue", Helvetica, Arial, sans-serif;
+	overflow: hidden;
+	width: 240px;
 
-	}
 
-	.field
-	{
-		border: 1px solid #c6c7cc;
-		border-radius: 5px;
-		font: 14px/1.4 "Helvetica Neue", Helvetica, Arial, sans-serif;
-		overflow: hidden;
-		width: 240px;
-		
-
-		
-	}
+	
+}
 
 
 
