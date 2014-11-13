@@ -120,11 +120,8 @@
 	border: 1px solid #c6c7cc;
 	border-radius: 5px;
 	font: 14px/1.4 "Helvetica Neue", Helvetica, Arial, sans-serif;
-	overflow: hidden;
-	width: 240px;
-
-
 	
+	width: 240px;
 }
 
 /*これで、文字と写真の間の長さを統一*/
@@ -137,8 +134,13 @@
 	height: 115px;
 }
 
-
-
-
+#photo_at_review
+p{
+	width:0px;
+ 	border-radius:500px;
+ 	border-radius:500px;
+ 	border-radius:500px;
+ 	display: inline-block;
+}
 
 
