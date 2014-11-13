@@ -21,22 +21,27 @@
 
 
 	<% if !review.new_record? && current_user.id == review.user_id %>
-	<%= link_to "Edit", edit_product_path %>
+	<%= link_to "Edit your review", edit_product_review_path(@product,review)%>
+
 	<% end %>
 </p>
 <% end %>
 
 
+<%= link_to "Edit product", edit_product_path %>
 	
 <%= link_to "Delete", product_path(@product), method: :delete, data:{confirm: "Are you sure you want to delete this comment?"}  %>
 
 <p id="photo_at_review">
 <%= image_tag(@product.url) %>
-</p>	
+</p>
+
+<%= link_to "All products", products_path %>	
+
 <!-- ここで写真が出るのは、既にコントローラーで探されているから。
  -->
 
-<h4>New Review</h4>
+
 <%= form_for([@product,@review]) do |f| %>
 <% if @review.errors.any? %>
 <div id="error_explanation">

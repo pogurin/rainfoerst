@@ -1,0 +1,22 @@
+<h1>Edit your review</h1>	
+<p>Enter the information to edit the Product<p>
+
+
+
+	
+	<%= form_for([@product, @review]) do |f| %> 
+
+	<div class="field">
+		<%= f.label :comment %><br/>
+		<%= f.text_area :comment %>	
+	</div>
+
+	<div class="actions">
+		<%= f.submit %>
+	</div>
+
+
+	<% end %>
+
+<!-- nested require [] -->
+<!-- Updateが必要 -->

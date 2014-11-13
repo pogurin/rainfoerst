@@ -35,7 +35,7 @@
  	border-radius: 200px;
  	border-radius: 200px;
  	display: inline-block;
- 	margin: 10px;
+ 	margin: 5px;
  }
 
 
@@ -48,11 +48,11 @@
  	display: inline;
  }
 
-.photo_name 
-{
-	background-color: red;
-	padding:1px;
-}
+ .photo_name 
+ {
+ 	background-color: red;
+ 	padding:1px;
+ }
 
  .photo_name a {
  	text-decoration: none;
@@ -97,10 +97,10 @@
 		border-radius: 30px;
 		border-radius: 30px;
 		background-color: white;
-}
+	}
 
-.create_product
-{
+	.create_product
+	{
 		background-color: white;
 		text-decoration: none;
 		color: red;
@@ -113,34 +113,32 @@
 		border-radius: 30px;
 		border-radius: 30px;
 		background-color: white;
-}
+	}
 
-.field
-{
-	border: 1px solid #c6c7cc;
-	border-radius: 5px;
-	font: 14px/1.4 "Helvetica Neue", Helvetica, Arial, sans-serif;
-	
-	width: 240px;
-}
+	.field
+	{
 
-/*これで、文字と写真の間の長さを統一*/
-.create_products {
-	margin: 10px;
-}
+		background-color: pink;
+		
+	}
 
-/*高さの統一で、imgの大きさを統一可能	*/
-.photo_name img {
-	height: 115px;
-}
+	/*これで、文字と写真の間の長さを統一*/
+	.create_products {
+		margin: 10px;
+	}
 
-#photo_at_review
-p{
-	width:0px;
- 	border-radius:500px;
- 	border-radius:500px;
- 	border-radius:500px;
- 	display: inline-block;
-}
+	/*高さの統一で、imgの大きさを統一可能	*/
+	.photo_name img {
+		height: 115px;
+	}
+
+	#photo_at_review
+	p{
+		width:0px;
+		border-radius:500px;
+		border-radius:500px;
+		border-radius:500px;
+		display: inline-block;
+	}
 
 

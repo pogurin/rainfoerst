@@ -2,6 +2,12 @@ class ReviewsController < ApplicationController
 	before_filter :load_product
 	before_filter :ensure_logged_in, only: [:create, :destroy]
 
+
+
+	def index
+		@reviews = Review.all
+	end
+
 	def show
 		@review = Review.find(params[:id])
 	end
@@ -19,6 +25,21 @@ class ReviewsController < ApplicationController
 	def destroy
 		@review = Review.find(params[:id])
 		@review.destroy
+	end
+
+	def edit
+		@review =  Review.find(params[:id])
+	end
+
+	def update
+		@review = Review.find(params[:id])
+
+		if @review.update_attributes(review_params)
+			redirect_to product_path(@product) 
+			# To defin the specific product 
+		else
+			render :edit
+		end
 	end
 
 	private
