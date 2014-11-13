@@ -14,6 +14,7 @@
 	Added on: <%= review.created_at %>
 	<% end %>
 
+
 	<% if !review.new_record? && current_user.id == review.user_id %>
 	<%= link_to "Delete", product_review_path(@product,review), method: :delete, data:{confirm: "Are you sure you want to delete this comment?"}  %>
 	<% end %>
@@ -25,15 +26,14 @@
 </p>
 <% end %>
 
+
 	
 <%= link_to "Delete", product_path(@product), method: :delete, data:{confirm: "Are you sure you want to delete this comment?"}  %>
 
 
-
-
-
-
-
+<%= image_tag(@product.url) %>	
+<!-- ここで写真が出るのは、既にコントローラーで探されているから。
+ -->
 
 <h4>New Review</h4>
 <%= form_for([@product,@review]) do |f| %>
@@ -50,12 +50,10 @@
 <% end %>
 
 
-
 <div class="field">
 	<%= f.label :comment %><br/>
 	<%= f.text_area :comment %>
 </div>
-
 
 
 

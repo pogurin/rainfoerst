@@ -115,20 +115,6 @@
 		background-color: white;
 }
 
-
-
-section{
-/*
-	position: absolute;
-	top: 220px; 
-	left:20px; 
-	height: 340px; 
-	width: 80px;
-*/
-}
-
-
-
 .field
 {
 	border: 1px solid #c6c7cc;
@@ -141,7 +127,15 @@ section{
 	
 }
 
+/*これで、文字と写真の間の長さを統一*/
+.create_products {
+	margin: 10px;
+}
 
+/*高さの統一で、imgの大きさを統一可能	*/
+.photo_name img {
+	height: 115px;
+}
 
 
 
