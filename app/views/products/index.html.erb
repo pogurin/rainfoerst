@@ -1,25 +1,15 @@
 <h1 id="title">ALL PRODUCTS</h1>
 
-
-	<section>
+<section>
 	<% @products.each do |product| %>
-
 		<div class="photo_name">
-
 			<h4 class="create_products">
 				<%= link_to product.name, product_path(product.id) %> 
 			</h4>
-			
-
 			<%= link_to image_tag(product.url), product_path(product.id) %>
 		</div>
-
-		<%= link_to "Go to Profile Page.", users_path(@user) %>
-
 	<% end %>
-
-
-	</section>
+</section>
 
 
 
