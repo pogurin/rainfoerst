@@ -46,7 +46,7 @@ class UsersController < ApplicationController
 
   private
   def user_params
-    params.require(:user).permit(:email, :password, :password_confirmation, :name,:user_id)
+    params.require(:user).permit(:email, :password, :password_confirmation, :name,:user_id,:picture)
   end
 
 # ここでのパーミッションにIDを含めず何度も死んでいる。

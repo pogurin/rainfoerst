@@ -1,4 +1,27 @@
 <p>This is your User page!!</p>
 <% if current_user %>
-	<p>Welcome <%= current_user.email %>!!!</p>
+	<p>Welcome <%= current_user.name %>!!!</p>
 <% end %>
+
+<div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.file_field :photo %>
+  </div>
+  <div class="action">
+    <%= f.submit %>
+  </div>
+<% end %>
+
+<p>
+  <strong>Name:</strong>
+  <%= @picture.name %>
+</p>
+
+<p>
+   <strong>Picture:</strong>
+   <%= image_tag @picture.photo.url(:medium) %>
+</p>
+

@@ -1,5 +1,5 @@
 Rainforest::Application.routes.draw do
-
+  root 'products#homepage'
   resources :users
   resources :sessions, only: [:new, :create, :destroy]
   resources :products do
