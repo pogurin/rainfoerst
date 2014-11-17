@@ -12,7 +12,7 @@ class ReviewsController < ApplicationController
 		@review = Review.find(params[:id])
 	end
 
-	def create
+	def created
 		@review = @product.reviews.build(review_params)
 		@review.user = current_user
 		if @review.save 

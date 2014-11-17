@@ -36,7 +36,7 @@
 <%= image_tag(@product.url) %>
 </p>
 
-<%= link_to "All products", products_path %>	
+	
 
 <!-- ここで写真が出るのは、既にコントローラーで探されているから。
  -->
@@ -67,6 +67,8 @@
 	<%= f.submit %> 
 </div>
 <% end %>
+
+<%= link_to "Go to All products", products_path(@product) %>
 
 <% else %>
 <p>plaease <%= link_to "log in", new_session_path %> to add a review. </p>
