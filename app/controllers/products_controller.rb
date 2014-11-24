@@ -45,6 +45,17 @@ class ProductsController < ApplicationController
 		end
 	end
 
+
+	def index
+    	@products = if params[:search]
+      		Product.where("LOWER(name) LIKE LOWER(?)", "%#{params[:search]}%")
+    	else
+      		Product.all
+    	end
+  	end
+
+
+
 	private
 	def product_params
 		params.require(:product).permit(:name, :description, :url, :price_in_cents)
