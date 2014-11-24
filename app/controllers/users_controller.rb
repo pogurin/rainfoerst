@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
  
-  before_filter :ensure_logged_in, only: [:create, :destroy]
+  before_filter :ensure_logged_in, only: [:destroy, :edit,:index,:show,:update]
 
   def index
     @reviews = User.all
