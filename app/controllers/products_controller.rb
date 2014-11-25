@@ -46,14 +46,18 @@ class ProductsController < ApplicationController
 	end
 
 
-	def index
+  	def index
     	@products = if params[:search]
       		Product.where("LOWER(name) LIKE LOWER(?)", "%#{params[:search]}%")
     	else
       		Product.all
     	end
-  	end
 
+    	respond_to do |format|
+    		format.html
+    		format.js
+    	end
+  	end
 
 
 	private
