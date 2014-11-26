@@ -50,7 +50,7 @@ class ProductsController < ApplicationController
     	else
       		Product.all
     	end
-    	
+
   		@products = @products.order('products.created_at ASC').page(params[:page])
 
     	respond_to do |format|

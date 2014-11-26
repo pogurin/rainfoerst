@@ -2,16 +2,24 @@
 //All this logic will automatically be available in application.js.
 //You can use CoffeeScript in this file: http://coffeescript.org/
 
-$(document).on('ready page:load', function() {
-  $('#search-form').submit(function(event) {
-    event.preventDefault();
-    var searchValue = $('#search').val();
+ $(document).on('ready page:load', function() {
+   var infinite_scroll = function() {
+		var url = $('.pagination span.next').children().attr('href');
 
-    $.getScript('/products?search=' + searchValue);
-    
-  });
-});
+		console.log(url);
+		if (url !== undefined)
+			$.getScript(url);
+   }
 
+   var infinite_scroll_throttled = $.throttle(500, infinite_scroll);
+
+   $(window).scroll(function() {
+    console.log("scrolled");
+     if ($(window).scrollTop() > $(document).height() - $(window).height() - 50) {
+     	infinite_scroll_throttled();
+     }
+   });
+ });
 
 
 

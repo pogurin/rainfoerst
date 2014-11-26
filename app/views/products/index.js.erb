@@ -1,22 +1,2 @@
-$('#products').html("<%= j(render @products) %>");
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<%# render @products %>
-<%# SAME AS WRITING 3 LINES %>
-<%# @products.each do |product| %>
-<%# render partial: 'product', locals: {product: product} %>
-<%# end %>
+$('#products').append("<%= j(render @products) %>"); //add stuff 
+$('.pagination').replaceWith('<%= j paginate(@products) %>');
