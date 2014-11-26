@@ -15,7 +15,6 @@ $(document).on('ready page:load', function() {
 
 
 
-
 // $(document).on('page:load ready', function() {
 // 	function display_search_results() {
 //     // readyState === 4 means that the asynchronous request completed successfully

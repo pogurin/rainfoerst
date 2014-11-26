@@ -1,7 +1,5 @@
 class ProductsController < ApplicationController
-	def index
-		@products = Product.all
-	end
+
 
 	def new
 		@product = Product.new
@@ -52,12 +50,15 @@ class ProductsController < ApplicationController
     	else
       		Product.all
     	end
+    	
+  		@products = @products.order('products.created_at ASC').page(params[:page])
 
     	respond_to do |format|
     		format.html
     		format.js
     	end
   	end
+
 
 
 	private
