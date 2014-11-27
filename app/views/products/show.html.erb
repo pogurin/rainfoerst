@@ -7,15 +7,9 @@
 <%= link_to "Go to Profile Page.", user_path %>
 
 
-
 <div id="review-list">
 	<%= render :partial => "reviews" %>	
 </div>
-
-
-
-
-
 
 
 <%= link_to "Edit product", edit_product_path %>
@@ -26,44 +20,42 @@
 	<%= image_tag(@product.url) %>
 </p>
 
-
-
 <!-- ここで写真が出るのは、既にコントローラーで探されているから。
 -->
 
-
 	<%= form_for [@product,@review], :remote => true do |f| %>
+	
+	<div id="review-form-errors">
+		<%= render :partial => "/products/review_form_errors" %>
+	</div>
+
 	<% if @review.errors.any? %>
 	<div id="error_explanation">
 		<h2><%= pluralize(@review.errors.count, "error") %>prohibited this review from being saved:</h2>
 
-		<ul> 
-			<% @review.errors.full_messages.each do |msg| %>
-			<li><%= msg %></li>
-			<% end %>
-		</ul>
+			<ul> 
+				<% @review.errors.full_messages.each do |msg| %>
+				<li><%= msg %></li>
+				<% end %>
+			</ul>
 	</div>
 	<% end %>
-
 
 	<div class="field">
 		<%= f.label :comment %><br/>
 		<%= f.text_area :comment %>
 	</div>
 
-
-
 	<div class="actions">
 		<%= f.submit %> 
 	</div>
 	<% end %>
 
-<%= link_to "Go to All products", products_path(@product) %>
+	<%= link_to "Go to All products", products_path(@product) %>
 
 <% else %>
-<p>plaease <%= link_to "log in", new_session_path %> to add a review. </p>
+	<p>plaease <%= link_to "log in", new_session_path %> to add a review. </p>
 <% end %>
-
 
 
 
