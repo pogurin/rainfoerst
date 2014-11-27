@@ -38,6 +38,11 @@
  	margin: 5px;
  }
 
+.create_products
+a,p{
+
+	color: white; 
+}
 
  .photo_name {
  	font-size: 40px;

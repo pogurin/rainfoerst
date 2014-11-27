@@ -1,0 +1,19 @@
+<div class="photo_name">
+	<h4 class="create_products">
+		<%= link_to product.id, product_path(product.id) %> 
+	</h4>
+	<%= link_to image_tag(product.url), product_path(product.id) %>
+	<h5>
+		<%= product.formatted_price %></br>
+		<%= product.name %>
+	</h5>
+	
+	<% link_to product_path(product.id) do %>
+	<% end %>
+
+	<p><%= truncate(product.description, length: 100) %></p>
+</div>
+
+<!-- This variable comes from index.js.erb OR from index.html.erb -->
+
+
