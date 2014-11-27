@@ -1,5 +1,5 @@
 alert("I am responding to your request!");
-$("#review-lisst").html("<%= escape_javascript(render(:partial => 'products/reviews')) %>
+$("#review-lisst").html("<%= escape_javascript(render(:partial => 'products/reviews')) %>")
 
 <% if @review.errors.present? %>
 	$("#review-form-errors").html("<%= escape_javascript(render(:partial => '/products/review_form_errors')) %>");

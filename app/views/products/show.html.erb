@@ -25,30 +25,30 @@
 
 	<%= form_for [@product,@review], :remote => true do |f| %>
 	
-	<div id="review-form-errors">
-		<%= render :partial => "/products/review_form_errors" %>
-	</div>
+		<div id="review-form-errors">
+			<%= render :partial => "/products/review_form_errors" %>
+		</div>
 
-	<% if @review.errors.any? %>
-	<div id="error_explanation">
-		<h2><%= pluralize(@review.errors.count, "error") %>prohibited this review from being saved:</h2>
+		<% if @review.errors.any? %>
+		<div id="error_explanation">
+			<h2><%= pluralize(@review.errors.count, "errors") %>prohibited this review from being saved:</h2>
 
 			<ul> 
 				<% @review.errors.full_messages.each do |msg| %>
 				<li><%= msg %></li>
 				<% end %>
 			</ul>
-	</div>
-	<% end %>
+		</div>
+		<% end %>
 
-	<div class="field">
-		<%= f.label :comment %><br/>
-		<%= f.text_area :comment %>
-	</div>
+		<div class="field">
+			<%= f.label :comment %><br/>
+			<%= f.text_area :comment %>
+		</div>
 
-	<div class="actions">
-		<%= f.submit %> 
-	</div>
+		<div class="actions">
+			<%= f.submit %> 
+		</div>
 	<% end %>
 
 	<%= link_to "Go to All products", products_path(@product) %>
@@ -61,7 +61,7 @@
 <script type="text/javascript">
 	$(function() {
 		$("#new_review")
-			.on('ajax:complete',function() {
+			.on('ajax:beforeSend',function() {
 				$("input[type='submit']")
 					.val('saving...')
 					.attr('disabled','disabled');
